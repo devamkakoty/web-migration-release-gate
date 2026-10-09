@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0",
+  "tool": "staging-migration-release-gate",
+  "created_utc": "2026-10-09T07:45:28.498782+00:00",
+  "evidence_label": "Synthetic / AI-assisted portfolio proof; not client work.",
+  "manifest_sha256": "a278bbedf7f8871dee94cef5954c6fabd9e3ff073531b9f53ca5f96f951759a3",
+  "scope": {
+    "allowed_origins": [
+      "http://127.0.0.1:49230"
+    ],
+    "method": "GET",
+    "retries": 0,
+    "timeout_seconds_per_hop": 3.0,
+    "max_redirects": 5,
+    "max_rows": 100,
+    "max_body_bytes": 131072
+  },
+  "gate": "HOLD",
+  "summary": {
+    "total": 10,
+    "passed": 3,
+    "failed": 7,
+    "requests_attempted": 14
+  },
+  "results": [
+    {
+      "row": 2,
+      "old_url": "http://127.0.0.1:49230/old-home",
+      "expected_url": "http://127.0.0.1:49230/home",
+      "expected_status": 200,
+      "title_marker": "Willow Studio",
+      "selector": "a#book",
+      "outcome": "PASS",
+      "actual_url": "http://127.0.0.1:49230/home",
+      "actual_status": 200,
+      "last_requested_url": "http://127.0.0.1:49230/home",
+      "actual_title": "Willow Studio | Home",
+      "title_truncated": false,
+      "selector_found": true,
+      "duplicate_of": null,
+      "attempts": 2,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/old-home",
+          "status": 301,
+          "location": "/home",
+          "location_truncated": false
+        },
+        {
+          "url": "http://127.0.0.1:49230/home",
+          "status": 200
+        }
+      ],
+      "issues": []
+    },
+    {
+      "row": 3,
+      "old_url": "http://127.0.0.1:49230/old-contact",
+      "expected_url": "http://127.0.0.1:49230/contact",
+      "expected_status": 200,
+      "title_marker": "Contact",
+      "selector": "form#contact-form",
+      "outcome": "PASS",
+      "actual_url": "http://127.0.0.1:49230/contact",
+      "actual_status": 200,
+      "last_requested_url": "http://127.0.0.1:49230/contact",
+      "actual_title": "Contact | Willow Studio",
+      "title_truncated": false,
+      "selector_found": true,
+      "duplicate_of": null,
+      "attempts": 3,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/old-contact",
+          "status": 302,
+          "location": "/contact-step",
+          "location_truncated": false
+        },
+        {
+          "url": "http://127.0.0.1:49230/contact-step",
+          "status": 308,
+          "location": "/contact",
+          "location_truncated": false
+        },
+        {
+          "url": "http://127.0.0.1:49230/contact",
+          "status": 200
+        }
+      ],
+      "issues": []
+    },
+    {
+      "row": 4,
+      "old_url": "http://127.0.0.1:49230/gone",
+      "expected_url": "http://127.0.0.1:49230/gone",
+      "expected_status": 410,
+      "title_marker": "",
+      "selector": "",
+      "outcome": "PASS",
+      "actual_url": "http://127.0.0.1:49230/gone",
+      "actual_status": 410,
+      "last_requested_url": "http://127.0.0.1:49230/gone",
+      "actual_title": null,
+      "title_truncated": false,
+      "selector_found": null,
+      "duplicate_of": null,
+      "attempts": 1,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/gone",
+          "status": 410
+        }
+      ],
+      "issues": []
+    },
+    {
+      "row": 5,
+      "old_url": "http://127.0.0.1:49230/wrong-status",
+      "expected_url": "http://127.0.0.1:49230/wrong-status",
+      "expected_status": 200,
+      "title_marker": "Unavailable",
+      "selector": "",
+      "outcome": "FAIL",
+      "actual_url": "http://127.0.0.1:49230/wrong-status",
+      "actual_status": 503,
+      "last_requested_url": "http://127.0.0.1:49230/wrong-status",
+      "actual_title": "Unavailable",
+      "title_truncated": false,
+      "selector_found": null,
+      "duplicate_of": null,
+      "attempts": 1,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/wrong-status",
+          "status": 503
+        }
+      ],
+      "issues": [
+        {
+          "code": "status_mismatch",
+          "detail": "Final HTTP status differs from the manifest."
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "old_url": "http://127.0.0.1:49230/missing-title",
+      "expected_url": "http://127.0.0.1:49230/missing-title",
+      "expected_status": 200,
+      "title_marker": "Contact",
+      "selector": "",
+      "outcome": "FAIL",
+      "actual_url": "http://127.0.0.1:49230/missing-title",
+      "actual_status": 200,
+      "last_requested_url": "http://127.0.0.1:49230/missing-title",
+      "actual_title": "Default template",
+      "title_truncated": false,
+      "selector_found": null,
+      "duplicate_of": null,
+      "attempts": 1,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/missing-title",
+          "status": 200
+        }
+      ],
+      "issues": [
+        {
+          "code": "title_marker_missing",
+          "detail": "Expected case-sensitive marker not found in the first title."
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "old_url": "http://127.0.0.1:49230/missing-cta",
+      "expected_url": "http://127.0.0.1:49230/missing-cta",
+      "expected_status": 200,
+      "title_marker": "Contact",
+      "selector": "form#contact-form",
+      "outcome": "FAIL",
+      "actual_url": "http://127.0.0.1:49230/missing-cta",
+      "actual_status": 200,
+      "last_requested_url": "http://127.0.0.1:49230/missing-cta",
+      "actual_title": "Contact",
+      "title_truncated": false,
+      "selector_found": false,
+      "duplicate_of": null,
+      "attempts": 1,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/missing-cta",
+          "status": 200
+        }
+      ],
+      "issues": [
+        {
+          "code": "selector_missing",
+          "detail": "Expected element not found in static HTML."
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "old_url": "http://127.0.0.1:49230/drift",
+      "expected_url": "http://127.0.0.1:49230/contact",
+      "expected_status": 200,
+      "title_marker": "Willow Studio",
+      "selector": "a#book",
+      "outcome": "FAIL",
+      "actual_url": "http://127.0.0.1:49230/home",
+      "actual_status": 200,
+      "last_requested_url": "http://127.0.0.1:49230/home",
+      "actual_title": "Willow Studio | Home",
+      "title_truncated": false,
+      "selector_found": true,
+      "duplicate_of": null,
+      "attempts": 2,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/drift",
+          "status": 301,
+          "location": "/home",
+          "location_truncated": false
+        },
+        {
+          "url": "http://127.0.0.1:49230/home",
+          "status": 200
+        }
+      ],
+      "issues": [
+        {
+          "code": "destination_mismatch",
+          "detail": "Final URL does not exactly match the normalized expected URL."
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "old_url": "http://127.0.0.1:49230/external",
+      "expected_url": "http://127.0.0.1:49230/home",
+      "expected_status": 200,
+      "title_marker": "Willow Studio",
+      "selector": "",
+      "outcome": "FAIL",
+      "actual_url": "http://127.0.0.1:49230/external",
+      "actual_status": 302,
+      "last_requested_url": "http://127.0.0.1:49230/external",
+      "actual_title": null,
+      "title_truncated": false,
+      "selector_found": null,
+      "duplicate_of": null,
+      "attempts": 1,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/external",
+          "status": 302,
+          "location": "https://not-authorized.invalid/collect",
+          "location_truncated": false
+        }
+      ],
+      "issues": [
+        {
+          "code": "unexpected_origin",
+          "detail": "Redirect leaves the allowlist; target was not requested."
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "old_url": "http://127.0.0.1:49230/loop-a",
+      "expected_url": "http://127.0.0.1:49230/home",
+      "expected_status": 200,
+      "title_marker": "Willow Studio",
+      "selector": "",
+      "outcome": "FAIL",
+      "actual_url": "http://127.0.0.1:49230/loop-b",
+      "actual_status": 302,
+      "last_requested_url": "http://127.0.0.1:49230/loop-b",
+      "actual_title": null,
+      "title_truncated": false,
+      "selector_found": null,
+      "duplicate_of": null,
+      "attempts": 2,
+      "chain": [
+        {
+          "url": "http://127.0.0.1:49230/loop-a",
+          "status": 301,
+          "location": "/loop-b",
+          "location_truncated": false
+        },
+        {
+          "url": "http://127.0.0.1:49230/loop-b",
+          "status": 302,
+          "location": "/loop-a",
+          "location_truncated": false
+        }
+      ],
+      "issues": [
+        {
+          "code": "redirect_loop",
+          "detail": "Redirect revisits an already requested URL."
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "old_url": "http://127.0.0.1:49230/old-home",
+      "expected_url": "http://127.0.0.1:49230/home",
+      "expected_status": 200,
+      "title_marker": "Willow Studio",
+      "selector": "a#book",
+      "outcome": "FAIL",
+      "actual_url": null,
+      "actual_status": null,
+      "last_requested_url": null,
+      "actual_title": null,
+      "title_truncated": false,
+      "selector_found": null,
+      "duplicate_of": 2,
+      "attempts": 0,
+      "chain": [],
+      "issues": [
+        {
+          "code": "duplicate_entry",
+          "detail": "Duplicate normalized old URL; skipped without another request."
+        }
+      ]
+    }
+  ]
+}

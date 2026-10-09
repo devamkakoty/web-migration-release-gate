@@ -1,0 +1,11 @@
+old_url,expected_url,expected_status,title_marker,selector
+{origin}/old-home,{origin}/home,200,Willow Studio,a#book
+{origin}/old-contact,{origin}/contact,200,Contact,form#contact-form
+{origin}/gone,{origin}/gone,410,,
+{origin}/wrong-status,{origin}/wrong-status,200,Unavailable,
+{origin}/missing-title,{origin}/missing-title,200,Contact,
+{origin}/missing-cta,{origin}/missing-cta,200,Contact,form#contact-form
+{origin}/drift,{origin}/contact,200,Willow Studio,a#book
+{origin}/external,{origin}/home,200,Willow Studio,
+{origin}/loop-a,{origin}/home,200,Willow Studio,
+{origin}/old-home,{origin}/home,200,Willow Studio,a#book
