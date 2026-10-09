@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "source": "Original local synthetic_fixture.py and samples/manifest.csv",
-  "created_utc": "2026-10-09T07:45:28.530594+00:00",
+  "created_utc": "2026-10-09T07:50:13.385290+00:00",
   "retrieval": "No downloads; served only by the local synthetic HTTP fixture.",
   "usage_note": "Synthetic / AI-assisted proof; no client data or third-party assets.",
   "runtime": "3.13.3",
@@ -12,7 +12,7 @@
     "gate.py",
     "<generated>/manifest.csv",
     "--allow-origin",
-    "http://127.0.0.1:49230",
+    "http://127.0.0.1:63472",
     "--authorized-staging",
     "--synthetic",
     "--out",
@@ -28,19 +28,19 @@
   "cli_exit": 1,
   "expected_hold_verified": true,
   "fixture_requests": 14,
-  "source_tree_sha256": "bf2f169fb3ea864b52e079dd04a4b2d777f84986ed44a0e3fe66344b33260833",
+  "source_tree_sha256": "4e01ed7383be4fdf66bf230d055c1bbb7367b0a4ea0e3eaa5037b7bd8ae0ee0d",
   "source_tree_definition": "SHA-256 of compact sorted JSON of the seven source path/hash pairs.",
   "sha256": {
-    "gate.py": "321b7e0f9136676e331d7b8666d797627c4115554158a5537f08b8992932388b",
+    "gate.py": "8e7678cea4da1e74d8c488bb7bed437980cf462a2a8661c005cff2f6245a39fd",
     "synthetic_fixture.py": "ead5d18eedaf609036286146eb4fca8d546dc8a969434cb67c2c1d8e846f37b0",
     "demo.py": "3e77ef79988da8fe06b6a5fd0c425442ebeeb6c0f84130f5503e0d6ffe668f85",
-    "test_gate.py": "27c25d276e05a1f3fd901e477e1263a93fc64d23ec35b89e0879a29755f8aaf4",
+    "test_gate.py": "90a451840bb1a0a976a4e4eaaf17d2c01f291545d2ae76f6001b789584054927",
     "README.md": "e66824772ab500d1a24145287637a889dbce48d571f66ccb2c7ecbc6f0e222d7",
     ".gitignore": "88fd8f17f7a9823bde7a823a65673a512fed5db3be5492c4a832dffa6d64ba3b",
     "samples/manifest.csv": "12769b5461855b99b1eac6371fdcb74641540b34605907e1e84e0a22eb990c5b",
-    "demo-output/manifest.csv": "a278bbedf7f8871dee94cef5954c6fabd9e3ff073531b9f53ca5f96f951759a3",
-    "demo-output/reports/report.csv": "7bd3c6c7879d0d590a34dd33e03c50446c304358cea8f2bd2517fd4021dfe8ff",
-    "demo-output/reports/report.json": "3a4b7067c836fdf331d0cf4b13077a2a9ac7f32c8b2330589eb185c4402f715e",
-    "demo-output/reports/report.md": "b523b36780b67eb017c84c72102488cf7ddc240f2be26cc2f3a993b8aa3487c6"
+    "demo-output/manifest.csv": "5f9e3a210fd355d03eabf054ad838f3019580c1f031154e20c5ad5168570847d",
+    "demo-output/reports/report.csv": "fce711b4af7402c038ffd9e8d73601f263dde4c759d522983e1cc8056656afc2",
+    "demo-output/reports/report.json": "c6aa8ef763774aa5287100c83fd2f388e79f43f74f9f16c870ac58fe3025ca43",
+    "demo-output/reports/report.md": "21e776dbe29e5dce897b84bcb76e4560c1e314a0c87a12b4320b7ca1b8d0fd6a"
   }
 }

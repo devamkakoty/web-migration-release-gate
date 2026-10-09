@@ -257,6 +257,8 @@ def inspect_page(response: Response, selector: str) -> PageProbe:
         text = response.body.decode(content.get_content_charset() or "utf-8", errors="strict")
     except (LookupError, UnicodeError) as exc:
         raise CheckError("decode_error", "Unsupported charset or invalid encoded page content.") from exc
+    if re.search(r"<!\[(?!CDATA\[)", text, flags=re.IGNORECASE):
+        raise CheckError("html_parse_error", "HTML parser could not evaluate this response.")
     probe = PageProbe(selector)
     try:
         probe.feed(text)

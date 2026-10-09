@@ -4,8 +4,8 @@ Synthetic / AI-assisted portfolio proof; not client work.
 
 **Decision: HOLD** | 3/10 checks passed | 7 blockers | 14 GET attempts
 
-Run: 2026-10-09T07:45:28.498782+00:00
-Manifest SHA-256: `a278bbedf7f8871dee94cef5954c6fabd9e3ff073531b9f53ca5f96f951759a3`
+Run: 2026-10-09T07:50:13.352897+00:00
+Manifest SHA-256: `5f9e3a210fd355d03eabf054ad838f3019580c1f031154e20c5ad5168570847d`
 
 This decision covers only the supplied manifest, not a production release authorization.
 Selectors prove static element presence, not visibility or working form submission.
@@ -14,16 +14,16 @@ Selectors prove static element presence, not visibility or working form submissi
 
 | Record | Result | Old URL | Expected destination | Observed destination | Status expected / observed | Chain |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2 | PASS | http://127.0.0.1:49230/old-home | http://127.0.0.1:49230/home | http://127.0.0.1:49230/home | 200 / 200 | 301 &gt; 200 |
-| 3 | PASS | http://127.0.0.1:49230/old-contact | http://127.0.0.1:49230/contact | http://127.0.0.1:49230/contact | 200 / 200 | 302 &gt; 308 &gt; 200 |
-| 4 | PASS | http://127.0.0.1:49230/gone | http://127.0.0.1:49230/gone | http://127.0.0.1:49230/gone | 410 / 410 | 410 |
-| 5 | FAIL | http://127.0.0.1:49230/wrong-status | http://127.0.0.1:49230/wrong-status | http://127.0.0.1:49230/wrong-status | 200 / 503 | 503 |
-| 6 | FAIL | http://127.0.0.1:49230/missing-title | http://127.0.0.1:49230/missing-title | http://127.0.0.1:49230/missing-title | 200 / 200 | 200 |
-| 7 | FAIL | http://127.0.0.1:49230/missing-cta | http://127.0.0.1:49230/missing-cta | http://127.0.0.1:49230/missing-cta | 200 / 200 | 200 |
-| 8 | FAIL | http://127.0.0.1:49230/drift | http://127.0.0.1:49230/contact | http://127.0.0.1:49230/home | 200 / 200 | 301 &gt; 200 |
-| 9 | FAIL | http://127.0.0.1:49230/external | http://127.0.0.1:49230/home | http://127.0.0.1:49230/external | 200 / 302 | 302 |
-| 10 | FAIL | http://127.0.0.1:49230/loop-a | http://127.0.0.1:49230/home | http://127.0.0.1:49230/loop-b | 200 / 302 | 301 &gt; 302 |
-| 11 | FAIL | http://127.0.0.1:49230/old-home | http://127.0.0.1:49230/home | - | 200 / - | not fetched |
+| 2 | PASS | http://127.0.0.1:63472/old-home | http://127.0.0.1:63472/home | http://127.0.0.1:63472/home | 200 / 200 | 301 &gt; 200 |
+| 3 | PASS | http://127.0.0.1:63472/old-contact | http://127.0.0.1:63472/contact | http://127.0.0.1:63472/contact | 200 / 200 | 302 &gt; 308 &gt; 200 |
+| 4 | PASS | http://127.0.0.1:63472/gone | http://127.0.0.1:63472/gone | http://127.0.0.1:63472/gone | 410 / 410 | 410 |
+| 5 | FAIL | http://127.0.0.1:63472/wrong-status | http://127.0.0.1:63472/wrong-status | http://127.0.0.1:63472/wrong-status | 200 / 503 | 503 |
+| 6 | FAIL | http://127.0.0.1:63472/missing-title | http://127.0.0.1:63472/missing-title | http://127.0.0.1:63472/missing-title | 200 / 200 | 200 |
+| 7 | FAIL | http://127.0.0.1:63472/missing-cta | http://127.0.0.1:63472/missing-cta | http://127.0.0.1:63472/missing-cta | 200 / 200 | 200 |
+| 8 | FAIL | http://127.0.0.1:63472/drift | http://127.0.0.1:63472/contact | http://127.0.0.1:63472/home | 200 / 200 | 301 &gt; 200 |
+| 9 | FAIL | http://127.0.0.1:63472/external | http://127.0.0.1:63472/home | http://127.0.0.1:63472/external | 200 / 302 | 302 |
+| 10 | FAIL | http://127.0.0.1:63472/loop-a | http://127.0.0.1:63472/home | http://127.0.0.1:63472/loop-b | 200 / 302 | 301 &gt; 302 |
+| 11 | FAIL | http://127.0.0.1:63472/old-home | http://127.0.0.1:63472/home | - | 200 / - | not fetched |
 
 ## Findings
 

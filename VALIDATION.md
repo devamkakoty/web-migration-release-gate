@@ -50,7 +50,7 @@ outreach was involved.
 ## Candidate Identity
 
 Source tree SHA-256:
-`bf2f169fb3ea864b52e079dd04a4b2d777f84986ed44a0e3fe66344b33260833`
+`4e01ed7383be4fdf66bf230d055c1bbb7367b0a4ea0e3eaa5037b7bd8ae0ee0d`
 
 Definition: SHA-256 of compact, key-sorted JSON containing path/SHA-256 pairs
 for `gate.py`, `synthetic_fixture.py`, `demo.py`, `test_gate.py`, `README.md`,

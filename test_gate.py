@@ -404,9 +404,13 @@ class ProbeTests(unittest.TestCase):
         self.assertEqual(probe.title, "Contact &lt; <form id=lead>")
         self.assertFalse(probe.found)
 
-    def test_malformed_declaration_is_a_check_failure(self):
+    def test_malformed_declaration_is_a_portable_check_failure(self):
         with self.assertRaises(gate.CheckError) as caught:
-            gate.inspect_page(gate.Response(200, content_type="text/html", body=b"<![broken]>"), "")
+            gate.inspect_page(gate.Response(
+                200,
+                content_type="text/html",
+                body=b"<title>Safe</title><![broken]><p>body</p>",
+            ), "form#lead")
         self.assertEqual(caught.exception.code, "html_parse_error")
 
     def test_charset_decode_and_content_encoding_errors(self):
